@@ -6,6 +6,7 @@ import paho.mqtt.client as mqtt
 import uuid
 import signal
 import ssl
+from datetime import datetime
 
 import digitalio
 from PIL import Image, ImageDraw, ImageFont
@@ -62,11 +63,16 @@ def on_connect(client, userdata, flags, rc):
     print(f"connected with result code {rc}")
     client.subscribe(topic)
 
+
 def on_message(cleint, userdata, msg):
     # if a message is recieved on the colors topic, parse it and set the color
+    current_time = datetime.now()
+    print("on message Current Time:", current_time)
     if msg.topic == topic:
         colors = list(map(int, msg.payload.decode('UTF-8').split(',')))
-        draw.rectangle((0, 0, width, height*0.5), fill=color)
+        print("msg",colors)
+        colors = tuple(colors)
+        draw.rectangle((0, 0, width, height*0.5), fill=colors)
         disp.image(image)
 
 client = mqtt.Client(str(uuid.uuid1()))
@@ -93,7 +99,6 @@ signal.signal(signal.SIGINT, handler)
 # our main loop
 while True:
     r, g, b, a = sensor.color_data
-    
     # there's a few things going on here 
     # colors are reported at 16bits (thats 65536 levels per color).
     # we need to convert that to 0-255. thats what the 255*(x/65536) is doing
@@ -101,9 +106,11 @@ while True:
     # 255*(1-(a/65536)) acts as scaling factor for brightness, it worked well enough in the lab but 
     # your success may vary depenging on how much ambient light there is, you can mess with these constants
     color =tuple(map(lambda x: int(255*(1-(a/65536))*255*(x/65536)) , [r,g,b,a]))
-
+    #print("color",color)
+    #print("rgb",r, g, b, a)
     # if we press the button, send msg to cahnge everyones color
     if not buttonA.value:
+        print("pressed")
         client.publish(topic, f"{r},{g},{b}")
     draw.rectangle((0, height*0.5, width, height), fill=color[:3])
     disp.image(image)
