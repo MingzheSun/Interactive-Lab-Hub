@@ -184,6 +184,8 @@ The team first started with a 2*2 small array to demonstrate the  feasibility of
 
 ![3421702624946_.pic](https://hackmd.io/_uploads/rypnRuYI6.jpg)
 
+The final 4 * 4 Servo Array configuration.
+![3471702686687_.pic](https://hackmd.io/_uploads/HJZxxdcUa.jpg)
 
 
 ### Additional Notes:
@@ -192,12 +194,15 @@ For any issues or further clarification, please refer to the project documentati
 
 ## Video Demostration
 Demo for water wave pattern (Click to view the demo)
+
 [![Demo for water wave pattern](https://hackmd.io/_uploads/BJpRjQKL6.png)](https://youtu.be/geulUWIEBAU?si=RRKsR7cBHxGSDyE2)
 
 Demo for emojis pattern (Click to view the demo)
+
 [![Demo for emojis pattern](https://hackmd.io/_uploads/BJmNnXt8T.png)](https://youtube.com/shorts/qyMroalDsIY?si=0ZJFcywn6DtwDChw)
 
 Demo for snake pattern and alphabetics (Click to view the demo)
+
 [![Demo for snake pattern and alphabetics](https://hackmd.io/_uploads/Bke837KUT.png)](https://youtube.com/shorts/A0PCnrdS-2E?si=upPTQTMMarFyF1BD)
 
 
@@ -208,57 +213,3 @@ The physical design's influence on user interaction was another significant less
 
 ## Work Distribution
 We capitalized on our individual strengths to distribute the workload efficiently for the "Magic Cube" project. One person took the lead on electronics, meticulously wiring, and soldering components to ensure the cube's responsiveness. Two group members were in charge of coding the system, implementing MQTT for communication, and ensuring seamless integration of the software with the main cube. The other two members were in charge of coding the raspberry Pi that receives the message from the main cube to control the set of 16 small blocks. We also had one person manage the physical construction and aesthetics of the cube, utilizing 3D printing technology to bring the structural concept to life. Lastly, all members focused on user experience and testing, gathering feedback to refine the interaction process, and documenting our progress for future reference. This collaborative effort allowed us to utilize each member's expertise effectively resulting in a well-rounded and innovative project outcome. We also want to thank Carl Gan who supported us in modeling 3D printings. 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## Objective
-
-The goal of this final project is for you to have a fully functioning and well-designed interactive device of your own design.
- 
-## Description
-Your project is to design and build an interactive device to suit a specific application of your choosing, and *test the interaction with people*. 
-
-## Deliverables
-
-1. Project plan: Big idea, timeline, parts needed, fall-back plan.
-
-2. Functioning project: The finished project should be a device, system, interface, etc. that people can interact with.
-
-3. Documentation of design process
-4. Archive of all code, design patterns, etc. used in the final design. (As with labs, the standard should be that the documentation would allow you to recreate your project if you woke up with amnesia.)
-5. Video of someone using your project
-6. Reflections on process (What have you learned or wish you knew at the start?)
-
-7. Group work distribution questionnaire
-
-## Change of Design
-
-It is fine to change your project goals, but please resubmit the project plan for the new design when you do that.
-
-## Grading rubric
-
-20% Project planning: Allocation of needed resources (time, people, materials, facilities) anticipated well.
-20% Design of project: Interaction, hardware and software aspects of projects planned well.
-20% Testing of project: Functional or wizarded system tested with people
-20% Prototype functionality: System capable of interaction, either through autonomous or wizarded mechanisms
-20% Project documentation: Text, video, and photo of project illustratign capability and documenting plans and process
-
-## Teams
-
-You can and are not required to work in teams. Be clear in documentation who contributed what. The total project contributions should reflect the number of people on the project.
-
-## Examples
-
-[Here is a list of good final projects from previous classes.](https://github.com/FAR-Lab/Developing-and-Designing-Interactive-Devices/wiki/Previous-Final-Projects)
-
